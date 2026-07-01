@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Autenticación</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f4; }
+        .form-container { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; max-width: 400px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); }
+        .hidden { display: none; }
+        .error { color: red; font-weight: bold; }
+        .success { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div id="welcome-view" class="form-container hidden">
+        <h2 id="welcome-message">
+            Welcome <span id="user-name"></span>! To logout click <a href="#" id="logout-link">here</a>
+        </h2>
+    </div>
+
+    <div id="signup-container" class="form-container">
+        <h2>Registro de Usuario</h2>
+        <form id="signup-form">
+            <input type="text" id="signup-name" placeholder="Nombre Completo (mín. 5 letras)" required><br><br>
+            <input type="email" id="signup-email" placeholder="Correo Electrónico" required><br><br>
+            <input type="password" id="signup-password" placeholder="Contraseña (mín. 8 caracteres, 1 número, 1 letra)" required><br><br>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p id="signup-result"></p>
+    </div>
+
+    <div id="login-container" class="form-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Correo Electrónico" required><br><br>
+            <input type="password" id="login-password" placeholder="Contraseña" required><br><br>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p id="login-result"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
